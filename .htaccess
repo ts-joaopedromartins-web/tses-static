@@ -1,0 +1,10 @@
+# Ambiente de teste (aprovação do cliente): fora do Google
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow"
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+</IfModule>
+
+DirectoryIndex index.html
+Options -Indexes
